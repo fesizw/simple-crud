@@ -1,0 +1,129 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+div.paleBlueRows {
+    background-color: #EEEEEE;
+    text-align: center;
+}
+.divTable.paleBlueRows .divTableCell, .divTable.paleBlueRows .divTableHead {
+    border: 1px solid #FFFFFF;
+}
+.divTable.paleBlueRows .divTableBody .divTableCell {
+    font-size: 13px;
+}
+.divTable.paleBlueRows .divTableRow:nth-child(even) {
+    background: #D0E4F5;
+}
+.divTable.paleBlueRows .divTableHeading {
+    background: #0B6FA4;
+    border-bottom: 5px solid #FFFFFF;
+}
+.divTable.paleBlueRows .divTableHeading .divTableHead {
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #FFFFFF;
+}
+.divTable.paleBlueRows .divTableHeading .divTableHead:first-child {
+    border-left: none;
+}
+
+.paleBlueRows .tableFootStyle {
+    font-size: 14px;
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
+
+body {
+    background-color: aliceblue;
+}
+
+.crud {
+    display: block;
+    position: relative;
+    text-align: center;
+    background-color: #D0E4F5;
+
+}
+
+.insert {
+    height: 320px;
+    width: 250px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 35px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.table {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: grid;
+    height: auto;
+    width: 650px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: auto;
+}
+
+.bt {
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.crud input {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 16px;
+    height: 40px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+
+}
+
+#insert {
+    background-color: greenyellow;
+    color: black;
+    padding: 8px;
+}
+
+#update {
+    background-color: darkcyan;
+    color: black;
+    margin-top: auto;
+    padding: 8px;
+}
+
+#delete {
+    background-color: firebrick;
+    color: black;
+    margin-top: auto;
+    padding: 8px;
+}
+h1{
+    text-align: center;
+    margin-top: 20px
+
+}
