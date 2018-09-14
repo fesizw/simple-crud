@@ -15,7 +15,7 @@ class select_cliente {
     }
 
     public function call_cli($ID_CLIENTE) {
-        
+        return $this->cliente->chamaCli($ID_CLIENTE);
     }
 
     public function callAll_CLIs() {

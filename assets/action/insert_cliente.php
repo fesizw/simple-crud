@@ -14,12 +14,12 @@ class insert_cliente {
         if (!empty($_POST['nome']) and ! empty($_POST['endereco']) and ! empty($_POST['login']) and ! empty($_POST['senha'])) {
             $this->cliente = new clientes();
             if ($this->cliente->cadastarCli($_POST['nome'], $_POST['endereco'], $_POST['login'], $_POST['senha'])) {
-                header("Location: ../../index.php?c=TRUE");
+                header("Location: ../view/index.php?c=TRUE");
             } else {
-                header("Location: ../../index.php?c=FALSE");
+                header("Location: ../view/index.php?c=FALSE");
             }
         } else {
-            header("Location: ../../index.php?c=ERROR");
+            header("Location: ../view/index.php?c=ERROR");
         }
     }
 

@@ -5,6 +5,8 @@ namespace assets\view;
 require_once '../action/select_cliente.php';
 
 use assets\action\select_cliente;
+
+$cliente = new select_cliente();
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,6 +24,10 @@ use assets\action\select_cliente;
                 echo '<script type="text/javascript">alert("Erro no cadastro.");</script>';
             } elseif ($_GET['c'] == 'ERROR') {
                 echo '<script type="text/javascript">alert("Favor preencher todos os campos.");</script>';
+            } elseif ($_GET['c'] == 'DERROR') {
+                echo '<script type="text/javascript">alert("Favor preencher todos os campos.");</script>';
+            } elseif ($_GET['c'] == 'DTRUE') {
+                echo '<script type="text/javascript">alert("Cliente deletado com sucesso.");</script>';
             }
         }
         ?>
@@ -56,11 +62,8 @@ use assets\action\select_cliente;
                         </div>
                     </div><div class="divTableBody">
                         <?php
-                        $cliente = new select_cliente();
-
                         $allcli = $cliente->callAll_CLIs();
                         $qtdCli = count($allcli);
-
 
                         for ($i = 0; $i < $qtdCli; $i++) {
                             $id = $allcli[$i]->ID_CLIENTE;
@@ -74,8 +77,8 @@ use assets\action\select_cliente;
                                 <div class='divTableCell'>$endereco</div>                                
                                 <div class='divTableCell'>$login</div>
                                 <div class='divTableCell'>**********</div>
-                                <div class='divTableCell'><button type='submit' name='update' class='bt' id='update' value='$id'>Atualizar</button></div>
-                                <div class='divTableCell'><button type='submit' name='delete' class='bt' id='delete' value='$id'>Delete</button></div>
+                                <div class='divTableCell'><a href='./update.php?id=$id' name='update' class='bt' id='update' style=\"text-decoration: none;\" value='$id'>Atualizar</a></div>
+                                <div class='divTableCell'><a name='delete' class='bt' id='delete' value='$id' style=\"cursor: pointer;\" onclick=\"deletar($id);\")>Delete</a></div>
                             </div>
                             ";
                         }

@@ -30,16 +30,25 @@ class clientes {
 
     public function cadastarCli($nome, $endereco, $login, $senha) {
         $return = $this->insert->insertCli($nome, $endereco, $login, $senha);
-        return (empty($return)) ? FALSE : TRUE;
+        return (!empty($return)) ? TRUE : FALSE;
+    }
+
+    public function atualizarCli($id, $nome, $endereco, $login, $senha) {
+        return $this->update->updateCli($id, $nome, $endereco, $login, $senha);
     }
 
     public function chamaCli($id) {
-        
+        $return = $this->select->simpleSelectOBJ("", "cliente", "ID_CLIENTE = $id");
+        return (!empty($return)) ? $return : FALSE;
     }
 
     public function chamaTodos_clis() {
         $return = $this->select->simpleSelectOBJ("", "cliente", "");
         return (!empty($return)) ? $return : FALSE;
+    }
+
+    public function deletaCli($id) {
+        return $this->delete->deleteCli($id);
     }
 
 }

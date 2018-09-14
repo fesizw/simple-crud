@@ -1,7 +1,7 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+function deletar(id) {
+    'use strict';
+    var r = confirm("Tem certeza que quer deletar o id: " + id + "?");
+    if (r === true) {
+        location.href = "../action/delete_cliente.php?id=" + id;
+    }
+}
